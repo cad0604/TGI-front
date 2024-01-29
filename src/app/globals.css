@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+input[type=file]::file-selector-button{
+    visibility: hidden;
+    color: transparent;
+}
+
+input[type=file]::-webkit-file-upload-button{
+    visibility: hidden;
+    color: transparent;
+}
+.boxGradient1st {
+    background: linear-gradient(126deg, #1380FF 9.34%, rgba(142, 202, 230, 0.90) 89.76%);
+
+}
+.texto {
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+}
+
+@media (min-width: 720px) {
+    .textforHederTitle{
+        font-size: 36px;
+    }
+}
+.redfill {
+    background: linear-gradient(20deg, #A4133C 2.85%, #EB6B7A 55.19%, #A4133C 95.89%);
+}
+.bluefill {
+
+    background: linear-gradient(
+            20deg,
+            #1E6AC3 17.65%,
+            rgba(149, 205, 232, 0.88) 49.95%,
+            #5DA7FE 77.87%
+    );
+
+}
+.greefill {
+background: linear-gradient( 20deg, #006D77 2.87%, #7BD8D0 55.47%, #006D77 96.39%);
+}
