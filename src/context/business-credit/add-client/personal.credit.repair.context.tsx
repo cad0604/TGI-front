@@ -53,7 +53,7 @@ export const ACContextProvider = ({
   const [h4, SetMobileH4] = useState("");
   const router = useRouter();
   const pathname = usePathname();
-  const isVisible = pathname === "/leads/business-credit/add-client/option3";
+  const isVisible = pathname === "/leads/business-credit/add-client/option4";
   const page = () => {
     const currentPage =
       DesktopBusinessCreditAddClientPages[pathname as keyof DesktopBusinessCreditAddClientPagesType] ||
@@ -96,7 +96,7 @@ export const ACContextProvider = ({
               zIndex: 20,
               marginTop: "16px",
             }}
-            className={"md:px-8  md:flex sticky top-0 hidden w-full"}
+            className={"md:px-8  md:flex sticky top-0 hidden w-[60%]"}
           >
             <DesktopAddClientStepper />
           </div>
@@ -112,7 +112,7 @@ export const ACContextProvider = ({
           </div>
           <div
             className={
-              "w-full flex md:flex-row flex-col justify-center items-center gap-8  md:gap-x-4 h-full"
+              "w-full flex md:flex-row flex-col justify-center items-center gap-8  md:gap-x-4"
             }
           >
             <div className={"w-[60%]"}>
@@ -144,9 +144,6 @@ export const ACContextProvider = ({
               <div className="w-[80%] grid grid-cols-2 gap-4 justify-center content-center items-center">
                 <LinkOption linkData={linkArray[0]} />
                 <LinkOption linkData={linkArray[1]} />
-                {/* {isVisible && linkArray.map((linkData) => (
-                <LinkOption linkData={linkData} />
-              ))} */}
               </div>
               <div className="flex w-full justify-center content-center items-center mt-6">
                 <div className="w-[40%]"><LinkOption linkData={linkArray[2]} /></div>

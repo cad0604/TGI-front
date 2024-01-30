@@ -22,11 +22,6 @@ export const DesktopAddClientStepper = () => {
       desc: "  (It requires...)",
       imgURL: "https://via.placeholder.com/26x26",
     },
-    {
-      label: " Premium Partner Refferral",
-      desc: "  (It requires...)",
-      imgURL: "https://via.placeholder.com/21x21",
-    },
   ];
   return (
     <div className={" flex flex-row items-center justify-center w-full h-auto"}>

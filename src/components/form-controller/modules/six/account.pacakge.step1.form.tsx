@@ -3,29 +3,20 @@
 import useForm from "new-react-use-form";
 import React, { FormEventHandler, useEffect, useLayoutEffect } from "react";
 
-import { IconButton, InputAdornment, TextField } from "@mui/material";
-import MenuItem from "@mui/material/MenuItem";
-import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
-import { LocalizationProvider } from "@mui/x-date-pickers-pro";
-import { DatePicker } from "@mui/x-date-pickers-pro";
+
 import { useMutation } from "@tanstack/react-query";
 import { ApiCalls } from "@/api/calls/calls";
 import { Calls } from "@/api/calls/type";
 import Link from "next/link";
 import { LinkIcon } from "@heroicons/react/24/outline";
 import { Button } from "@mui/material";
-import { AccountPackagePerson } from "@/components/business_credit_elements/account-package/person";
 import { AccountPersonItem } from "@/components/business_credit_elements/account-package/item";
-import Autocomplete from "@mui/material/Autocomplete";
-import { states } from "@/data/ states";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { Checkbox, Typography } from "@material-tailwind/react";
-import { usePCR } from "@/context/onboarding/personal.credit.repair.context";
 import { useAP } from "@/context/business-credit/account-package/personal.account.pacakge.context";
 import { handleFormError } from "@/utils/error";
 import toast from "react-hot-toast";
 import Cookies from "js-cookie";
 import { useRouter } from "next/navigation";
+import { ArrowForward } from "@mui/icons-material";
 
 import { LinkOption } from "@/components/link/add-client/link.option3";
 interface Option {
@@ -149,11 +140,6 @@ export const AccountPackageStep1Form = () => {
         " md:mt-10 mb-1 flex flex-col h-fit justify-start items-start  md:px-8 px-[16px] w-full"
       }
     >
-      <div className="grid grid-cols-12 justify-start mt-[-2rem]">
-        <div className="w-max h-max col-start3 col-end-5">
-          <img className="w-20 h-20" src="/userbig.png" alt="person" />
-        </div>
-      </div>
       <div className="w-full justify-center text-center text-4xl">
         EMBARK ON YOUR <span className=" text-red-800">"BUSINESS CREDIT"</span> SCALING JOURNEY.
       </div>
@@ -184,53 +170,39 @@ export const AccountPackageStep1Form = () => {
 
           <div>
             <div className="flex flex-row my-4">
-              <LinkIcon width={"1.7rem"} style={{ marginRight: '1.5rem' }} /><Link href={"/"} style={{ fontSize: '1.5rem', marginLeft: '1,5rem' }}>Business Formation</Link>
+              <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem', marginLeft: '1,5rem' }}>Business Formation</Link>
             </div>
             <div className="flex flex-row my-4">
-              <LinkIcon width={"1.7rem"} style={{ marginRight: '1.5rem' }} /><Link href={"/"} style={{ fontSize: '1.5rem' }}>Website Setup</Link>
+              <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem' }}>Website Setup</Link>
             </div>
             <div className="flex flex-row my-2">
-              <LinkIcon width={"1.7rem"} style={{ marginRight: '1.5rem' }} /><Link href={"/"} style={{ fontSize: '1.5rem' }}>Business Email Setup</Link>
+              <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem' }}>Business Email Setup</Link>
             </div>
             <div className="flex flex-row my-4">
-              <LinkIcon width={"1.7rem"} style={{ marginRight: '1.5rem' }} /><Link href={"/"} style={{ fontSize: '1.5rem' }}>Business Credit Builder</Link>
+              <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem' }}>Business Credit Builder</Link>
             </div>
             <div className="flex flex-row my-4">
-              <LinkIcon width={"1.7rem"} style={{ marginRight: '1.5rem' }} /><Link href={"/"} style={{ fontSize: '1.5rem' }}>Access To Lines Of Credit</Link>
+              <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem' }}>Access To Lines Of Credit</Link>
             </div>
             <div className="flex flex-row my-4">
-              <LinkIcon width={"1.7rem"} style={{ marginRight: '1.5rem' }} /><Link href={"/"} style={{ fontSize: '1.5rem' }}>Business Credit Cards & More Funding</Link>
+              <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem' }}>Business Credit Cards & More Funding</Link>
             </div>
           </div>
 
           <div className="flex w-[65%] rounded-full mt-6">
-            <Button style={{ height: '4rem', backgroundColor: 'rgb(222, 226, 128)', borderRadius: '4rem', fontSize: '2rem' }} onClick={() => { ; }}>CHOOSE PLAN</Button>
+            <Link href={"#"} style={{ height: '4rem', width:'100%'}}>
+              <Button style={{ height: '4rem', backgroundColor: 'rgb(222, 226, 128)', borderRadius: '4rem', fontSize: '2rem' }} onClick={() => { ; }}>CHOOSE PLAN</Button>
+            </Link>
           </div>
 
           <div className="flex w-full rounded-[5rem] mt-28">
-            <Button style={{ height: '5rem', backgroundColor: 'rgb(46, 45, 45)', borderRadius: '2rem', fontSize: '2rem' }} onClick={() => { ; }}>CONTINUE</Button>
-          </div>
-        </div>
-
-        <div className="flex flex-col col-start-10 ml-10 w-max">
-          <div className=" flex flex-col w-44 h-44 mt-36 justify-center content-center items-center border-2 border-gray-200 rounded-full">
-            <div className="flex w-20 h-20 bg-pink-600 rounded-full justify-center content-center items-center text-5xl text-white z-40">M</div>
-            <img className=" object-center w-28 h-28 mt-[-2rem] ml-6 z-50 rounded-full" src="/userbig.png" alt="banner" />
-          </div>
-          <div className="flex mt-64 ml-28">
-            <AccountPackagePerson />
+            <Link href={"/leads/business-credit/add-client/option2"} style={{ height: '5rem', width:'100%'}}>
+              <Button style={{ height: '5rem', backgroundColor: 'rgb(46, 45, 45)', borderRadius: '2rem', fontSize: '2rem' }} onClick={() => { ; }}>CONTINUE</Button>
+            </Link>
           </div>
         </div>
       </div>
-
-      <div className="w-full grid grid-cols-12 mt-[-3rem] justify-between z-10">
-        <div className="flex flex-col col-start-10 ml-10 w-max">
-          <div className="flex mt-36 ml-28">
-            <AccountPackagePerson />
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col w-full content-center justify-center items-center mt-[-19rem] z-20">
+      <div className="flex flex-col w-full content-center justify-center items-center mt-[4rem] z-20">
         <div className="w-[90%] grid grid-cols-3 gap-4 justify-center">
           <AccountPersonItem personItem={personItems[0]} />
           <AccountPersonItem personItem={personItems[1]} />
