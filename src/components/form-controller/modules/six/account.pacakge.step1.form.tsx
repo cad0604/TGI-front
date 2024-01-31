@@ -154,11 +154,9 @@ export const AccountPackageStep1Form = () => {
 
       <div className="w-full grid grid-cols-12 mt-[-3rem] justify-between">
         <div className="flex flex-col col-start-4 col-end-10 w-full justify-center content-center items-center bg-gray-100 mt-6 rounded-[5rem]">
-          <div className="flex flex-col w-full h-36 bg-[url(/package1.png)] justify-center content-center items-center">
+          <div className="flex flex-col w-full h-80 bg-[url(/business-account/banner.png)] justify-center content-center items-center bg-cover">
             {/*I have to change this account package banner png file.  */}
             {/* <img className=" object-center max-w-full h-28 z-0" src="/package1.png" alt="banner" /> */}
-            <p className="text-white text-2xl z-10">RECOMMENDED</p>
-            <p className="text-white text-5xl">Gold Package</p>
           </div>
 
           <div className="flex md:w-[80%] text-gray-700 justify-center content-center items-center space-y-[-0.5rem] mt-3">
