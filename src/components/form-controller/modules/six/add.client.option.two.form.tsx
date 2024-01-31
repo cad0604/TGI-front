@@ -100,34 +100,30 @@ export const AddClientOptionTwoForm = () => {
         }
       >
         {/* Sort and Search Bar */}
-        <div className="grid grid-col-12 gap-10 justify-start">
-          <div className="flex col-start-1 col-span-2">
+        <div className="flex flex-row w-full justify-start">
+          <div className="flex flex-row w-max ml-6">
             <div className="flex flex-row my-2 mt-10 justify-start">
               <div className="flex w-max"><Settings /></div>
               <div className="flex w-max px-3">Sort By A to Z</div>
               <div className="flex w-max"><ChevronDownIcon className="h-6" /></div>
             </div>
-          </div>
-          <div className="flex col-start-3 col-span-2">
             <div className="flex flex-row my-2 mt-10 justify-start">
               <div className="flex w-max ml-8"><DateRangeIcon /></div>
-              <div className="flex w-max px-3">Sort By A to Z</div>
+              <div className="flex w-max px-3">Sort By Date</div>
               <div className="flex w-max"><ChevronDownIcon className="h-6" /></div>
             </div>
           </div>
 
-          <div className="flex col-start-8 col-span-3">
-            <div className="flex w-max">
-              <TextField label="Search by name" style={{ marginTop: '1rem' }} />
-            </div>
-          </div>
-          <div className="flex col-start-11 col-span-2">
-            <Button className="h-6 mt-8 pb-6 bg-blue-600">ADD CLIENTS</Button>
+          <div className="flex flex-row w-full justify-end mr-6">
+              <div className="flex w-max">
+                <TextField label="Search by name" style={{ marginTop: '1rem' }} />
+              </div>
+              <Button className="h-6 mt-8 pb-6 bg-blue-600">ADD CLIENTS</Button>
           </div>
         </div>
 
         {/* Title bar of Client's informations */}
-        <div className="grid grid-col-12 gap-[4.5rem] justify-center mt-8 ml-4">
+        <div className="grid grid-col-12 gap-[4.5rem] justify-center mt-8 ml-4 w-full">
           <div className="flex col-start-1 col-span-2 justify-center content-center items-center text-md">
             FIRST NAME
           </div>
@@ -168,7 +164,7 @@ export const AddClientOptionTwoForm = () => {
         <div className=" h-52"></div>
 
       </form>
-  
+
     </>
   );
 };

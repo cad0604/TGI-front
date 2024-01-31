@@ -123,8 +123,8 @@ export const AddClientOption2QRForm = () => {
                 </div>
             </div>
             <div className="flex content-center items-center justify-center w-full mt-[4rem]">
-                <div className="flex justify-center content-center items-center h-[40px] w-[200px]">
-                    <img className="flex h-[40px] w-[200px] mb-5" src="/module/six/money.png" alt="image" />
+                <div className="flex text-[8rem] text-blue-400 justify-center content-center items-center h-[40px] w-[200px]">
+                    $95
                 </div>
             </div>
             <div className="flex content-center items-center justify-center w-full mt-[4rem]">
@@ -152,9 +152,6 @@ export const AddClientOption2QRForm = () => {
                 </div>
             </div>
             <div className="flex content-center items-center justify-center w-full mt-[1rem]z-40">
-                <div className="flex justify-center content-center items-center h-[40px] w-[40px]">
-                    <img className="flex h-[40px] w-[400px] mb-5" src="/module/six/money.png" alt="image" />
-                </div>
                 <div className="flex w-max content-center justify-center items-center text-gray-700 pt-3">
                     <div className="flex text-lg text-gray-500 pl-2">Missing Credits?</div>
                     <div className="flex text-lg text-blue-500 pl-2">Contact</div>
