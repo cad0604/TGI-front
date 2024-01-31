@@ -50,11 +50,11 @@ export const MonitorReportForm = () => (
             {/* step 1 */}
             <p className="text-blue-500">Step1</p>
             <div className="flex flex-row w-full pl-2">
-                <div className="flex w-[30rem] justify-start text-2xl my-2"><h2>Fundability Foundation</h2></div>
+                <div className="flex w-[30rem] justify-start text-md my-2"><h3>Fundability Foundation</h3></div>
                 <div className="flex w-full justify-end"><SquaresPlusIcon className="h-8 text-blue-600" /></div>
             </div>
             {fundability.map((report) => (
-                <div className="flex flex-row my-4 pl-2 w-[30rem]">
+                <div className="flex flex-row my-4 pl-2 w-[30rem] w-full">
                     <Setting className="text-blue-600" />
                     <Link className="ml-4 text-gray-400" href={report.url}>{report.name}</Link>
                 </div>
@@ -62,11 +62,11 @@ export const MonitorReportForm = () => (
             {/* step 2 */}
             <p className="text-blue-500">Step2</p>
             <div className="flex flex-row w-full pl-2">
-                <div className="flex w-[30rem] justify-start text-2xl my-2"><h2>Establish Business Reports</h2></div>
+                <div className="flex w-[30rem] justify-start text-md my-2"><h3>Establish Business Reports</h3></div>
                 <div className="flex w-full justify-end"><SquaresPlusIcon className="h-8 text-blue-600" /></div>
             </div>
             {establish.map((report) => (
-                <div className="flex flex-row my-4 pl-2 w-[30rem]">
+                <div className="flex flex-row my-4 pl-2 w-[30rem] w-full">
                     <Setting className="text-blue-600" />
                     <Link className="ml-4 text-gray-400" href={report.url}>{report.name}</Link>
                 </div>
@@ -74,17 +74,17 @@ export const MonitorReportForm = () => (
             {/* step 3 */}
             <p className="text-blue-500">Step3</p>
             <div className="flex flex-row w-full pl-2">
-                <div className="flex w-[30rem] justify-start text-2xl my-2"><h2>Start Building: </h2></div>
+                <div className="flex w-[30rem] justify-start text-md my-2"><h3>Start Building: </h3></div>
                 <div className="flex w-full justify-end"><div className="h-8 text-blue-600">Tier1 </div></div>
             </div>
             {/* step 4 */}
             <p className="text-blue-500">Step4</p>
             <div className="flex flex-row w-full pl-2">
-                <div className="flex w-[30rem] justify-start text-2xl my-2"><h2>Monitor Business Reports</h2></div>
+                <div className="flex w-[30rem] justify-start text-md my-2"><h3>Monitor Business Reports</h3></div>
                 <div className="flex w-full justify-end"><SquaresPlusIcon className="h-8 text-blue-600" /></div>
             </div>
             {monitor.map((report) => (
-                <div className="flex flex-row my-4 pl-2 w-[30rem]">
+                <div className="flex flex-row my-4 pl-2 w-full">
                     <Setting className="text-blue-600" />
                     <Link className="ml-4 text-gray-400" href={report.url}>{report.name}</Link>
                 </div>
@@ -92,19 +92,19 @@ export const MonitorReportForm = () => (
             {/* step 5 */}
             <p className="text-blue-500">Step5</p>
             <div className="flex flex-row w-full pl-2">
-                <div className="flex w-[30rem] justify-start text-2xl my-2"><h2>Building Credit: </h2></div>
+                <div className="flex w-[30rem] justify-start text-md my-2"><h3>Building Credit: </h3></div>
                 <div className="flex w-full justify-end"><div className="h-8 text-blue-600">Tier1 </div></div>
             </div>
             {/* step 6 */}
             <p className="text-blue-500">Step4</p>
             <div className="flex flex-row w-full pl-2">
-                <div className="flex w-[30rem] justify-start text-2xl my-2"><h2>Advance Building: </h2></div>
+                <div className="flex w-[30rem] justify-start text-md my-2"><h3>Advance Building: </h3></div>
                 <div className="flex w-full justify-end"><div className="h-8 text-blue-600">Tier1 </div></div>
             </div>
             {/* step 7 */}
             <p className="text-blue-500">Step7</p>
             <div className="flex flex-row w-full pl-2">
-                <div className="flex w-[30rem] justify-start text-2xl my-2"><h2>Revolving Account: </h2></div>
+                <div className="flex w-[30rem] justify-start text-md my-2"><h3>Revolving Account: </h3></div>
                 <div className="flex w-full justify-end"><div className="h-8 text-blue-600">Tier1 </div></div>
             </div>
         </div>
