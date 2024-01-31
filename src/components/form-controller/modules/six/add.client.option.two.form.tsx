@@ -127,7 +127,7 @@ export const AddClientOptionTwoForm = () => {
         </div>
 
         {/* Title bar of Client's informations */}
-        <div className="grid grid-col-12 gap-[4.5rem] justify-center mt-8 ml-4">
+        <div className="grid grid-col-12 gap-[4.5rem] justify-center mt-8 ml-4 w-full">
           <div className="flex col-start-1 col-span-2 justify-center content-center items-center text-md">
             FIRST NAME
           </div>

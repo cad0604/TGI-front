@@ -14,7 +14,8 @@ interface AddClientInformationProps {
 export const AddClientInformation: React.FC<AddClientInformationProps> = (props) => {
     return (
         <>
-            <div className="grid grid-col-12 gap-[4.5rem] justify-center mt-4 border-2 border-gray-100 py-4 rounded-2xl w-full">
+            <div className="grid grid-col-12 gap-[4.5rem] justify-center mt-8 ml-4 border-2 border-gray-100 rounded-2xl w-full">
+           {/* </div> <div className="grid grid-col-12 gap-[4.5rem] justify-center mt-4 border-2 border-gray-100 py-4 rounded-2xl w-full"> */}
                 <div className="flex col-start-1 col-span-2 justify-center content-center items-center text-xs">
                     {props.clientInformations.firstName}
                 </div>
