@@ -3,7 +3,7 @@
 import useForm from "new-react-use-form";
 import React, { FormEventHandler, useEffect, useLayoutEffect } from "react";
 
-
+import Image from "next/image";
 import { useMutation } from "@tanstack/react-query";
 import { ApiCalls } from "@/api/calls/calls";
 import { Calls } from "@/api/calls/type";
@@ -152,12 +152,16 @@ export const AccountPackageStep1Form = () => {
         </div>
       </div>
 
-      <div className="w-full grid grid-cols-12 mt-[-3rem] justify-between">
+      <div className="w-full grid grid-cols-12 mt-[1rem] justify-between">
         <div className="flex flex-col col-start-4 col-end-10 w-full justify-center content-center items-center bg-gray-100 mt-6 rounded-[5rem]">
-          <div className="flex flex-col w-full h-80 bg-[url(/business-account/banner.png)] justify-center content-center items-center bg-cover">
+          <div className="flex">
+                      <Image src={"/business-account/banner.png"} objectFit="cover" alt="" width={700} height={1000} />
+
+          </div>
+          {/* // <div className="flex flex-col w-full h-80 bg-[url(/business-account/banner.png)] justify-center content-center items-center bg-cover"> */}
             {/*I have to change this account package banner png file.  */}
             {/* <img className=" object-center max-w-full h-28 z-0" src="/package1.png" alt="banner" /> */}
-          </div>
+          {/* I</div> */}
 
           <div className="flex md:w-[80%] text-gray-700 justify-center content-center items-center space-y-[-0.5rem] mt-3">
             <span className="text-4xl">$1997/</span>
@@ -167,22 +171,22 @@ export const AccountPackageStep1Form = () => {
           <div className="text-gray-500 text-lg mt-2">$1000 Down Payment And 399 Monthly</div>
 
           <div>
-            <div className="flex flex-row my-4">
+            <div className="flex flex-row my-8">
               <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem', marginLeft: '1,5rem' }}>Business Formation</Link>
             </div>
-            <div className="flex flex-row my-4">
+            <div className="flex flex-row my-8">
               <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem' }}>Website Setup</Link>
             </div>
-            <div className="flex flex-row my-2">
+            <div className="flex flex-row my-8">
               <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem' }}>Business Email Setup</Link>
             </div>
-            <div className="flex flex-row my-4">
+            <div className="flex flex-row my-8">
               <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem' }}>Business Credit Builder</Link>
             </div>
-            <div className="flex flex-row my-4">
+            <div className="flex flex-row my-8">
               <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem' }}>Access To Lines Of Credit</Link>
             </div>
-            <div className="flex flex-row my-4">
+            <div className="flex flex-row my-8">
               <ArrowForward style={{ marginRight: '1.5rem', color: 'rgb(94, 89, 89)', fontSize: '2rem' }} /><Link href={"#"} style={{ fontSize: '1.5rem' }}>Business Credit Cards & More Funding</Link>
             </div>
           </div>
